@@ -22,17 +22,11 @@ b.3) Use batch operation, calibrating the machine's memory. (chosen)
 
 b.4) Batch merge with queue (unnecessary complexity for POC)
 
+b.5) parallel processing (greater complexity and machine requirement)
+
 2- Data Acquisition:
 
 To query data, I used the ORM available in the framework used. Could have inserted into another table during the data loading process, optimizing the query and following CQRS
-
-## Data Upload
-
-I divided the project into two fronts, very inspired by CQRS.
-
-
-- **Bulk Uploads:** Currently, bulk upload is not available in this framework.
-- **Asynchronous Batching:** Utilize a queue to break the data into asynchronous batches (local machine limit is 5).
 
 
 ## Development
