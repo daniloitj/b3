@@ -87,7 +87,9 @@ Follow these steps to set up the project locally:
 
 Run the following command to execute tests:
 
-
+ ```
+  yarn test
+  ```
 
 
 ## Endpoints
