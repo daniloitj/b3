@@ -22,7 +22,9 @@ b.3) Use batch operation, calibrating the machine's memory. (chosen)
 
 b.4) Batch merge with queue (unnecessary complexity for POC)
 
-obs: To query data, I used the ORM available in the framework used. Could have inserted into another table during the data loading process, optimizing the query and following CQRS
+2- Data Acquisition:
+
+To query data, I used the ORM available in the framework used. Could have inserted into another table during the data loading process, optimizing the query and following CQRS
 
 ## Data Upload
 
