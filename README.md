@@ -1,6 +1,37 @@
 # B3 Playground System
 
-The B3 Playground System is a robust platform designed to interact with financial data from the B3 Stock Exchange. This system allows for data seeding, data upload, and accessing specific data endpoints.
+The B3 Playground System is a robust platform designed to interact with financial data from the B3 Stock Exchange. 
+
+I divided the project into two fronts, very inspired by CQRS. 
+
+1- data population. 
+
+a) Option 1: - use the ORM used in the framework. 
+
+- Blocking was that it does not accept bulk. 
+
+b) Option 2 (chosen): 
+
+- use direct connection to Mongo. 
+
+b.1) read file and send. (Very slow) 
+
+b.2) Play in a queue and process (Very slow). 
+
+b.3) Use batch operation, calibrating the machine's memory. (chosen) 
+
+b.4) Batch merge with queue (unnecessary complexity for POC)
+
+obs: To query data, I used the ORM available in the framework used. Could have inserted into another table during the data loading process, optimizing the query and following CQRS
+
+## Data Upload
+
+I divided the project into two fronts, very inspired by CQRS.
+
+
+- **Bulk Uploads:** Currently, bulk upload is not available in this framework.
+- **Asynchronous Batching:** Utilize a queue to break the data into asynchronous batches (local machine limit is 5).
+
 
 ## Development
 
@@ -61,10 +92,7 @@ Follow these steps to set up the project locally:
 Run the following command to execute tests:
 
 
-## Data Upload
 
-- **Bulk Uploads:** Currently, bulk upload is not available in this framework.
-- **Asynchronous Batching:** Utilize a queue to break the data into asynchronous batches (local machine limit is 5).
 
 ## Endpoints
 
